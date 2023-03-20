@@ -82,6 +82,7 @@ html {
 
 .del {
     flex: 1;
+    background-color: lightgreen;
 }
 
 .del:hover {

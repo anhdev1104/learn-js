@@ -12,7 +12,11 @@
     outline: none;
     border-radius: 7px;
     overflow: hidden;
-    max-width: 155px;
+    max-width: 15.4rem;
+    box-shadow: 0 0.09rem 3.125rem 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: 500;
 }
 
 .btn-red a {
@@ -20,9 +24,10 @@
     display: block;
     text-decoration: none;
     color: var(--white-color);
-    background-color: var(--primary-color);
 }
 
 .btn-red:hover a {
     background-color: var(--hover-color);
+    transition: linear 0.25s;
 }
+

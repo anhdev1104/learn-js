@@ -42,7 +42,7 @@ body {
 }
 
 .header {
-    
+    height: 880px;
 }
 
 .header-top {
@@ -87,43 +87,55 @@ body {
     font-weight: 500;
 }
 
-.account-item {
-    list-style: none;
+.account-btn {
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    overflow: hidden;
+    background-color: var(--white-color);
 }
 
 .account-link {
     display: block;
     padding: 11px 30px;
-    border-radius: 7px;
     color: var(--second-color);
     text-decoration: none;
 }
 
-.account-item:hover:first-child a{
+.account-btn:hover:first-child a{
     background-color: #F3F3F3;
-}
-
-.account-login a {
-    color: var(--white-color);
-    background-color: var(--primary-color);
-}
-
-.account-login:hover a {
-    background-color: var(--hover-color);
 }
 
 /* header content */
 
 .header-main {
-    display: flex;
-    align-items: center;
     padding-top: 13.3rem;
     background: url(../img/banner.png) top center / cover no-repeat;
-    height: 700px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    color: var(--white-color);
 }
 
 .header-heading {
+    max-width: 50rem;
+    line-height: 7.2rem;
     font-weight: 700;
     font-size: 4.8rem;
-    color: var(--white-color);
+    margin: 0;
+}
+
+.header-text {
+    font-size: 1.8rem;
+    max-width: 71.5rem;
+    line-height: 2.7rem;
+    text-align: justify;
+}
+
+.header-footer {
+    padding-top: 15rem;
 }

@@ -5,5 +5,24 @@
     --text-color: #858181;
     --white-color: #FFFFFF;
     --primary-font: "Poppins", sans-serif;
-    
+}
+
+.btn-red {
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 155px;
+}
+
+.btn-red a {
+    padding: 11px 30px;
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn-red:hover a {
+    background-color: var(--hover-color);
 }

@@ -300,3 +300,82 @@ body {
     font-weight: 600;
     margin: 0;
 }
+
+.service-main {
+    margin-top: 10rem;
+}
+
+.service-left {
+    color: var(--white-color);
+}
+
+.service-left-box {
+    display: flex;
+    align-items: center;
+}
+
+.service-left-box:nth-of-type(2) {
+    margin: 2rem 0;
+}
+
+.service-left-box:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: linear 0.25s;
+}
+
+.block-number {
+    display: flex;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 1px dashed;
+    margin-right: 2rem;
+    border-radius: 50%;
+}
+
+.block-text-number {
+    margin: auto;
+    font-family: PT Serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.left-box-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.service-right {
+    color: var(--white-color);
+    border-left: 1px solid #F3F3F3;
+    height: 165px;
+    display: flex;
+}
+
+.service-right-box {
+    margin: auto;
+    margin-left: 10rem;
+}
+
+.service-right-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.service-right-text {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.content {
+
+}
+
+.content-title {
+
+}
+
+.content-heading {
+    
+}

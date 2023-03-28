@@ -5,6 +5,7 @@
     --text-color: #858181;
     --white-color: #FFFFFF;
     --primary-font: "Poppins", sans-serif;
+    --boder--color: #dbdbdb;
 }
 
 .btn-red {
@@ -30,4 +31,8 @@
     background-color: var(--hover-color);
     transition: linear 0.25s;
 }
+
+
+
+
 

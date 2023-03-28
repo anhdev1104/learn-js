@@ -26,8 +26,19 @@ html {
 body {
     font-family: var(--primary-font);
     background-color: var(--white-color);
-    min-height: 100vh;
     font-size: 1.4rem;
+}
+
+.ptb-200 {
+    padding: 20rem 0;
+}
+
+.l-height72 {
+    line-height: 7.2rem;
+}
+
+.l-height27 {
+    line-height: 2.7rem;
 }
 
 .app {
@@ -45,10 +56,6 @@ body {
     display:flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.header {
-    height: 880px;
 }
 
 .header-top {
@@ -127,7 +134,6 @@ body {
 
 .header-heading {
     max-width: 50rem;
-    line-height: 7.2rem;
     font-weight: 700;
     font-size: 4.8rem;
     margin: 0;
@@ -136,8 +142,8 @@ body {
 .header-text {
     font-size: 1.8rem;
     max-width: 71.5rem;
-    line-height: 2.7rem;
     text-align: justify;
+    font-weight: 400;
 }
 
 .header-footer {
@@ -179,4 +185,118 @@ body {
 
 .nav-item-icon {
     margin: 0 1rem;
+}
+
+.about {
+
+}
+.about-content {
+
+}
+.about-title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.about-heading {
+    text-align: center;
+    color: var(--second-color);
+    font-size: 4.8rem;
+    font-weight: 600;
+    max-width: 804px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-box-item {
+    position: relative;
+    margin-top: 10rem;
+}
+
+.about-box-wrap {
+    text-align: center;
+    width: 31rem;
+}
+
+.about-box-icon {
+    box-shadow: 0 6px 1.8rem rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+}
+
+.about-icon {
+    color: var(--primary-color);
+    font-size: 3rem;
+    margin: auto;
+}
+
+.about-box-title {
+    padding: 2rem 0 1rem 0;
+    color: var(--second-color);
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.about-text {
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+.about-vector-box1, 
+.about-vector-box2 {
+    width: 100%;
+    max-width: 372px;
+    padding: 0 1.5rem;
+}
+
+.about-vector {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.about-vector-box1 {
+    position: absolute;
+    top: 0;
+    left: 16%;
+    transform: translateY(-50%);
+}
+
+.about-vector-box2 {
+    position: absolute;
+    top: 0;
+    right: 16%;
+    transform: translateY(150%);
+}
+
+/* service */
+
+.service {
+    background-color: #000000;
+}
+
+.service-content {
+    padding: 10rem 0;
+}
+
+.service-header {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service-titile {
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+
+.service-heading {
+    color: var(--white-color);
+    font-size: 4.8rem;
+    font-weight: 600;
+    margin: 0;
 }

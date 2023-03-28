@@ -372,10 +372,30 @@ body {
 
 }
 
-.content-title {
+.content-header {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: center;
+}
 
+.content-title {
+    color: var(--text-color);
+    font-size: 1.8rem;
 }
 
 .content-heading {
-    
+    margin: 0;
+    color: var(--second-color);
+    font-weight: 600;
+    font-size: 4.8rem;
+}
+
+.brand-container {
+    margin: 5rem 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }

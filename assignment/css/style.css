@@ -399,3 +399,47 @@ body {
     justify-content: space-between;
     gap: 2rem;
 }
+
+/* product */
+.product {
+    width: 100%;
+    max-width: 295px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 1.4rem;
+}
+
+.product-img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-title  {
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+.price {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 500;
+}
+.price-rent-wrap {
+    display: flex;
+    color: var(--text-color);
+}
+.price-rent {
+    font-weight: 500;
+    font-size: 2rem;
+}
+.price-month {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    transform: translateY(35%);
+}

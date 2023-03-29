@@ -18,16 +18,18 @@
                     Tên task: 
                     <span class="icon">*</span>
                 </p>   
-                <input type="text" class="input-name" placeholder="Nhập vào tên..." required>
+                <input type="text" id="input-name" placeholder="Nhập vào tên..." required>
                 <p for="" class="form-title">
                     Mô tả: 
                     <span class="icon">*</span>
                 </p>
-                <textarea name="" id="" cols="10" rows="5" class="input-desc" placeholder="Mô tả chi tiết..." required></textarea>
-                <button class="btn">ADD</button>
+                <textarea name="" cols="10" rows="5" id="input-desc" placeholder="Mô tả chi tiết..." required></textarea>
+                <button type="submit" class="btn" onclick="add()">ADD</button>
                 <p class="note">Kí hiệu (<span class="icon">*</span>): nội dung không được bỏ trống</p>
             </div>
+            <h2 class="list-title">Danh sách tasks</h2>
         </form>
+
     </div>
 
     <script src="./app.js"></script>

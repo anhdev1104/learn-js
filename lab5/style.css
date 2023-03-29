@@ -20,9 +20,10 @@ html {
 .form {
     margin: auto;
     width: 800px;
+    height: 700px;
     background-color: #FFFAF0;
     box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    border-radius: 2rem;
     color: #333;
 }
 
@@ -32,7 +33,7 @@ html {
 
 .form-heading {
     text-align: center;
-    padding: 15px 0 40px 0;
+    padding: 1.5rem 0 4rem 0;
     font-size: 3.5rem;
     font-weight: 700;
     font-family: 'Times New Roman', Times, serif;
@@ -40,7 +41,7 @@ html {
 }
 
 .form-title {
-    padding: 30px 0 5px 0;
+    padding: 3rem 0 5px 0;
     font-weight: 600;
     font-size: 1.5rem;
 }
@@ -49,8 +50,8 @@ html {
     color: red;
 }
 
-.input-name,
-.input-desc {
+#input-name,
+#input-desc {
     width: 100%;
     padding: 10px 25px;
     border: 1px solid #dbdbdb;
@@ -73,6 +74,11 @@ html {
     font-size: 1rem;
 }
 
+.list-title {
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    padding-left: 3rem;
+}
 
 
 

@@ -14,13 +14,11 @@ html {
     width: 100%;
     height: 745px;
     display: flex;
-    
 }
 
 .form {
     margin: auto;
     width: 800px;
-    height: 700px;
     background-color: #FFFAF0;
     box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 2rem;
@@ -28,6 +26,9 @@ html {
 }
 
 .form-main {
+    position: relative;
+    width: 100%;
+    height: 52rem;
     padding: 1.5rem 2.5rem;
 }
 
@@ -41,17 +42,14 @@ html {
 }
 
 .form-title {
-    padding: 3rem 0 5px 0;
+    margin: 3rem 0 5px 0;
     font-weight: 600;
-    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+    font-size: 1.6rem;
 }
 
-.icon {
-    color: red;
-}
-
-#input-name,
-#input-desc {
+.form-input {
     width: 100%;
     padding: 10px 25px;
     border: 1px solid #dbdbdb;
@@ -61,23 +59,90 @@ html {
 }
 
 .btn {
-    margin: 50px 0;
+    position: absolute;
+    right: 2.5rem;
+    margin-top: 5rem;
     padding: 12px 50px;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
-    float: right;
     cursor: pointer;
+    background-color: #00b159;
+    color: #FFFAF0;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: #49b780;
+    transition: linear 0.3s;
 }
 
 .note {
-    padding-top: 30px;
-    font-size: 1rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.list-menu {
+    width: 100%;
+    padding: 1.5rem 2.5rem;
+    list-style: none;
+    font-size: 1.4rem;
 }
 
 .list-title {
-    margin-top: 5rem;
     font-size: 1.4rem;
-    padding-left: 3rem;
+    padding: 0 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+
+}
+.list-wrap {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.list-wrap span {
+    flex: 3;
+    margin: 0.7rem 0;
+}
+
+.list-wrap-btn {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-delete,
+.btn-edit {
+    right: 2.5rem;
+    padding: 12px 30px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6497b1;
+    color: #fff;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.btn-delete {
+    background-color: #fe4a49;
+}
+
+.btn-delete:hover {
+    background-color:  #ff6868;
+    transition: linear .3s;
+}
+
+.btn-edit:hover {
+    background-color: #7da2b5;
+    transition: linear .3s;
 }
 
 

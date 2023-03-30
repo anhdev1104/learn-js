@@ -11,27 +11,21 @@
 
 <body>
     <div class="container">
-        <form class="form">
+        <form id="task-form" class="form">
             <div class="form-main">
                 <h1 class="form-heading">TODO LIST</h1>
-                <p for="" class="form-title">
-                    Tên task: 
-                    <span class="icon">*</span>
-                </p>   
-                <input type="text" id="input-name" placeholder="Nhập vào tên..." required>
-                <p for="" class="form-title">
-                    Mô tả: 
-                    <span class="icon">*</span>
-                </p>
-                <textarea name="" cols="10" rows="5" id="input-desc" placeholder="Mô tả chi tiết..." required></textarea>
-                <button type="submit" class="btn" onclick="add()">ADD</button>
-                <p class="note">Kí hiệu (<span class="icon">*</span>): nội dung không được bỏ trống</p>
+                <label for="task-name" class="form-title">Tên Task: <span style="color: red;">*</span></label>
+                <input type="text" id="task-name" name="task-name" required minlength="5" class="form-input"><br><br>
+                <label for="task-description" class="form-title">Mô tả: <span style="color: red;">*</span></label>
+                <textarea id="task-description" name="task-description" cols="30" rows="6" required minlength="20"
+                    class="form-input"></textarea>
+                <p class="note">Kí hiệu (<span style="color: red">*</span>): nội dung không được bỏ trống</p>
+                <button type="submit" class="btn">Add</button>
             </div>
-            <h2 class="list-title">Danh sách tasks</h2>
+            <h2 class="list-title">Danh sách task:</h2>
+            <ul id="task-list" class="list-menu"></ul>
         </form>
-
     </div>
-
     <script src="./app.js"></script>
 </body>
 

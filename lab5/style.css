@@ -1,149 +1,126 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 62.5%;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-
-.container {
-    width: 100%;
-    height: 745px;
+body {
     display: flex;
+    height: 100vh;
 }
 
-.form {
-    margin: auto;
-    width: 800px;
+button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: linear .3s;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
     background-color: #FFFAF0;
+    padding: 30px;
+    margin: auto;
+    border-radius: 30px;
     box-shadow: 0 1px 3.125rem 0 rgba(0, 0, 0, 0.2);
-    border-radius: 2rem;
-    color: #333;
 }
 
-.form-main {
-    position: relative;
-    width: 100%;
-    height: 52rem;
-    padding: 1.5rem 2.5rem;
-}
-
-.form-heading {
-    text-align: center;
-    padding: 1.5rem 0 4rem 0;
-    font-size: 3.5rem;
-    font-weight: 700;
-    font-family: 'Times New Roman', Times, serif;
+.title {
     letter-spacing: 3px;
-}
-
-.form-title {
-    margin: 3rem 0 5px 0;
+    text-align: center;
     font-weight: 600;
-    display: block;
-    cursor: pointer;
-    font-size: 1.6rem;
+    color: brown;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.form-input {
+.sub-title {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+
+input, textarea {
     width: 100%;
+    display: block;
     padding: 10px 25px;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     outline-color: #8FBC8F;
-    font-size: 1.4rem;
+    font-size: 14px;
+    color: #333;
+}
+
+#task-name {
+    margin-bottom: 30px;
+}
+
+#task-description {
+    margin-bottom: 30px;
+}
+
+.buttonrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 
 .btn {
-    position: absolute;
-    right: 2.5rem;
-    margin-top: 5rem;
-    padding: 12px 50px;
-    border: 1px solid #dbdbdb;
-    border-radius: 5px;
     cursor: pointer;
+    padding: 12px 40px;
     background-color: #00b159;
-    color: #FFFAF0;
-    font-size: 1.4rem;
-    outline: none;
+    color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
 }
 
 .btn:hover {
-    background-color: #49b780;
-    transition: linear 0.3s;
+    background-color:  #49b780;
 }
 
-.note {
-    padding-top: 1rem;
-    font-size: 1.2rem;
+.btn-disabled {
+    cursor: default;
+    background-color: rgb(146, 146, 146);
+    color: rgb(209, 209, 209);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.list-menu {
-    width: 100%;
-    padding: 1.5rem 2.5rem;
-    list-style: none;
-    font-size: 1.4rem;
+.btn-disabled:hover {
+    background-color: rgba(127, 127, 127, 0.909);
 }
 
-.list-title {
-    font-size: 1.4rem;
-    padding: 0 2.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.6rem;
-
-}
-.list-wrap {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-
+.row {
+    display: grid;
+    grid-template-columns: 25% 40% 15% 15%;
+    column-gap: 10px;
+    margin-top: 10px;
 }
 
-.list-wrap span {
-    flex: 3;
-    margin: 0.7rem 0;
+.btn-del {
+    background-color: #fe4a49;
+    color: #fff;
 }
 
-.list-wrap-btn {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.btn-delete,
-.btn-edit {
-    right: 2.5rem;
-    padding: 12px 30px;
-    border: 1px solid #dbdbdb;
-    border-radius: 5px;
+.btn-del:hover {
+    background-color: #ff6868;
     cursor: pointer;
+}
+
+.btn-edit {
     background-color: #6497b1;
     color: #fff;
-    font-size: 1.4rem;
-    outline: none;
-}
-
-.btn-delete {
-    background-color: #fe4a49;
-}
-
-.btn-delete:hover {
-    background-color:  #ff6868;
-    transition: linear .3s;
 }
 
 .btn-edit:hover {
     background-color: #7da2b5;
-    transition: linear .3s;
+    cursor: pointer;
 }
-
-
-

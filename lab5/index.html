@@ -5,27 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form input</title>
+    <title>TODO LIST</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <div class="container">
-        <form id="task-form" class="form">
-            <div class="form-main">
-                <h1 class="form-heading">TODO LIST</h1>
-                <label for="task-name" class="form-title">Tên Task: <span style="color: red;">*</span></label>
-                <input type="text" id="task-name" name="task-name" required minlength="5" class="form-input"><br><br>
-                <label for="task-description" class="form-title">Mô tả: <span style="color: red;">*</span></label>
-                <textarea id="task-description" name="task-description" cols="30" rows="6" required minlength="20"
-                    class="form-input"></textarea>
-                <p class="note">Kí hiệu (<span style="color: red">*</span>): nội dung không được bỏ trống</p>
-                <button type="submit" class="btn">Add</button>
+    <!-- container of dodo list -->
+    <div class="wrapper">
+        <h1 class="title">TODO LIST</h1>
+        <label for="" class="sub-title">Task Name:</label>
+        <input type="text" name="task-name" id="task-name" placeholder="Enter task name">
+        <label for="" class="sub-title">Description:</label>
+        <textarea name="task-description" id="task-description" cols="30" rows="8"
+            placeholder="Enter description of the task"></textarea>
+        <div class="buttonrow">
+            <button id="btnAdd" class="btn btn-disabled" disabled="true">Add</button>
+        </div>
+        <h5 class="sub-title">Tasks List:</h5>
+        <section id="task-list">
+            <div class="row">
+                <div class="name">Name</div>
+                <div class="des">Description</div>
+                <div class="del">Del</div>
+                <div class="edit">Edit</div>
             </div>
-            <h2 class="list-title">Danh sách task:</h2>
-            <ul id="task-list" class="list-menu"></ul>
-        </form>
+        </section>
     </div>
+
     <script src="./app.js"></script>
 </body>
 

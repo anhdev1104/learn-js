@@ -1,72 +1,83 @@
-    const form = document.getElementById("task-form");
-    const taskList = document.getElementById("task-list");
-    let tasks = [];
+// section 
+let list = document.getElementById('task-list');
+let btnAdd = document.getElementById('btnAdd');
 
-    //Thêm trình xử lý sự kiện để gửi biểu mẫu
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const taskName = form.elements["task-name"].value;
-        const taskDescription = form.elements["task-description"].value;
-
-        // Xác thực tên và mô tả task
-        if (taskName.length < 5 || taskDescription.length < 20) {
-            alert("Tên task phải có ít nhất 5 ký tự và mô tả task phải có ít nhất 20 ký tự.");
-            return;
-        }
-
-        // Thêm task mới vào danh sách task
-        const newTask = { name: taskName, description: taskDescription };
-        tasks.push(newTask);
-        const taskIndex = tasks.length - 1;
-        const taskListItem = document.createElement("li");
-        taskListItem.innerHTML = `
-        <div class="list-wrap">
-            <span>${newTask.name}:    ${newTask.description}</span>
-            <div class="list-wrap-btn">
-                <button onclick="editTask(${taskIndex})" class="btn-edit">Edit</button>
-                <button onclick="deleteTask(${taskIndex})" class="btn-delete">Delete</button>
-            </div>
-        </div>
-            `;
-        taskList.appendChild(taskListItem);
-
-        // Xóa các trường nhập biểu mẫu
-        form.elements["task-name"].value = "";
-        form.elements["task-description"].value = "";
-    });
-
-    // Chức năng xử lý chỉnh sửa một tác vụ
-    function editTask(taskIndex) {
-        const task = tasks[taskIndex];
-        const newTaskName = prompt("Nhập tên task mới:", task.name);
-        const newTaskDescription = prompt("Nhập mô tả task mới:", task.description);
-
-        // Xác thực tên và mô tả task mới
-        if (newTaskName.length < 5 || newTaskDescription.length < 20) {
-            alert("Tên task phải có ít nhất 5 ký tự và mô tả task phải có ít nhất 20 ký tự.");
-            return;
-        }
-
-        // Cập nhật task trong danh sách task
-        task.name = newTaskName;
-        task.description = newTaskDescription;
-        const taskListItem = taskList.children[taskIndex];
-        taskListItem.innerHTML = `
-        <div class="list-wrap">
-            <span>${task.name}: ${task.description}</span>
-            <div class="list-wrap-btn">
-                <button onclick="editTask(${taskIndex})" class="btn-edit">Edit</button>
-                <button onclick="deleteTask(${taskIndex})" class="btn-delete">Delete</button>
-            </div>
-
-        </div>
-            
-            `;
+// listener for inputs
+let inputName = document.getElementById('task-name');
+inputName.addEventListener('keyup', () => {
+    if (inputName.value.length < 5) {
+        btnAdd.disabled = true;
+        btnAdd.classList.add('btn-disabled');
+    } else {
+        btnAdd.classList.remove('btn-disabled');
+        btnAdd.disabled = false;
     }
+});
 
-    // Hàm xử lý xóa tác vụ
-    function deleteTask(taskIndex) {
-        tasks.splice(taskIndex, 1);
-        const taskListItem = taskList.children[taskIndex];
-        taskListItem.remove();
+btnAdd.addEventListener('click', () => {
+    addRow();
+});
+
+function addRow() {
+    // get task name + description
+    let task_name = document.getElementById('task-name').value;
+    let task_des = document.getElementById('task-description').value;
+    let disabledInput = true;
+
+    if (task_name.length < 5 || task_des.length < 20) {
+        alert('Name length must be greater or eqal 5 characters and Description must be greater or eqal 20 characters');
+    } else {
+        // create row
+        let row = document.createElement('div');
+        row.classList.add('row');
+
+        // create name
+        let name = document.createElement('input');
+        name.type = 'text';
+        name.value = task_name;
+        name.disabled = disabledInput;
+
+        // create description
+        let description = document.createElement('input');
+        description.value = task_des;
+        description.disabled = disabledInput;
+
+        // create button delete
+        let btnDel = document.createElement('button');
+        btnDel.innerHTML = 'Delete';
+        btnDel.classList.add('btn-del');
+
+        // create button edit
+        let btnEdit = document.createElement('button');
+        btnEdit.innerHTML = 'Edit';
+        btnEdit.classList.add('btn-edit');
+
+        // add child to row
+        row.appendChild(name);
+        row.appendChild(description);
+        row.appendChild(btnDel);
+        row.appendChild(btnEdit);
+        // add row to list
+        list.appendChild(row);
+
+        // edit event
+        btnEdit.addEventListener('click', () => {
+
+            if (description.value.length < 20 || name.value.length < 5) {
+                alert('can\'t update');
+            } else {
+                disabledInput = !disabledInput;
+                name.disabled = disabledInput;
+                description.disabled = disabledInput;
+
+                // change button label => update
+                btnEdit.innerHTML = disabledInput ? 'Edit' : 'Update';
+            }
+        });
+
+        // delete event
+        btnDel.addEventListener('click', () => {
+            list.removeChild(row);
+        });
     }
+}

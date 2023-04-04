@@ -10,7 +10,7 @@ html {
 
 body {
     height: 400vh;
-    /* margin: 0 auto; */
+    background-color: #e5e6eb; 
 }
 
 .mySlides {
@@ -72,8 +72,11 @@ img {
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
-    width: 100%;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    text-shadow: 0 0 1px rgba(0,0,0,1);
+    
 }
 
 .numbertext {

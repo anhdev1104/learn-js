@@ -24,3 +24,12 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+// The onmouseover Event
+function bigImg(x) {
+    x.style.transform = 'scale(1.4)';
+}
+
+function normalImg(x) {
+    x.style.transform = 'scale(1)'
+}

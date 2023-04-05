@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Drag and drop</h1>
+            <p class="text">
+                Drag the list items over the dustbin, and drop them to have the bin eat the item
+            </p>
+        <div class="main">
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="main-left">
+                <h1  class="bin-text">BIN</h1>
+            </div>
+            <div class="main-right">
+                <div class="box-wrap">
+                    <span class="item" id="one" draggable="true" ondragstart="drag(event)">ONE</span>
+                    <span class="item" id="two" draggable="true" ondragstart="drag(event)">TWO</span>
+                    <span class="item" id="three" draggable="true" ondragstart="drag(event)">THREE</span>
+                    <span class="item" id="four" draggable="true" ondragstart="drag(event)">FOUR</span>
+                    <span class="item" id="five" draggable="true" ondragstart="drag(event)">FIVE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

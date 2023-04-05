@@ -28,6 +28,7 @@ function showSlides(n) {
 // The onmouseover Event
 function bigImg(x) {
     x.style.transform = 'scale(1.4)';
+    x.style.transition = 'ease-in-out .3s'
 }
 
 function normalImg(x) {

@@ -8,6 +8,7 @@
     --boder--color: #dbdbdb;
 }
 
+.btn-submit,
 .btn-red {
     border: none;
     outline: none;
@@ -83,4 +84,17 @@
 .btn-size-xl:hover a {
     background-color: var(--hover-color);
     transition: linear 0.3s;
+}
+
+.btn-submit {
+    padding: 11px 30px;
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: var(--hover-color);
+    transition: linear 0.25s;
 }

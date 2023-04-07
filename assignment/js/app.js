@@ -8,5 +8,18 @@ function mouseOver() {
 }
 
 function mouseOut() {
-    document.getElementById('benefit-img-car').style.transform = 'scale(1)';
+    document.getElementById('benefit-img-car').style.transform = 'scale(1)'; 
 }
+
+// auto slideShow background-images 
+var images = ['./img/banner.png', './img/banner2.jpg', './img/banner3.webp'];
+var currentIndex = 0; // Chỉ số hiện tại của hình ảnh
+
+function changeBackground() {
+    document.getElementById('background').style.backgroundImage = 'url(' + images[currentIndex] + ')';
+    currentIndex = (currentIndex + 1) % images.length; // Tăng chỉ số hiện tại lên 1, nếu đã đạt đến cuối danh sách thì quay lại đầu danh sách
+
+}
+setInterval(changeBackground, 5000); // Gọi hàm changeBackground mỗi 5 giây để thay đổi background
+
+

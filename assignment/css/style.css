@@ -67,7 +67,7 @@ body {
     right: 0;
     padding: 3rem 0;    
     background-color: var(--white-color);
-    z-index: 1;
+    z-index: 2;
 }
 
 .header-logo,
@@ -129,10 +129,14 @@ body {
 /* header content */
 
 .header-main {
+    position: relative;
     padding-top: 13.3rem;
-    background: url(../img/banner.png) top center / cover;
-    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+/* header-content */
 
 .header-content {
     display: flex;
@@ -147,6 +151,7 @@ body {
     font-weight: 700;
     font-size: 4.8rem;
     margin: 0;
+    text-shadow: 0 0 1px #000;
 }
 
 .header-text {
@@ -154,6 +159,7 @@ body {
     max-width: 71.5rem;
     text-align: justify;
     font-weight: 400;
+    text-shadow: 0 0 1px #000;
 }
 
 .header-footer {
@@ -546,8 +552,6 @@ body {
     width: 100%;
     max-width: 53rem;
     height: 76rem;
-    /* background: url(../img/big-car.png) top center / contain no-repeat;
-    background-size: 100% 100%; */
 }
 
 #benefit-img-car {
@@ -783,7 +787,7 @@ body {
 
 .contact-title {
     display: block;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
     font-weight: 500;
     font-size: 1.6rem;
     cursor: pointer;

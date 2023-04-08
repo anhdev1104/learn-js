@@ -818,11 +818,7 @@ body {
     gap: 5rem;
 }
 
-.input-box-email {
-    flex: 1;
-}
-
-.input-box-phone {
+.form-group {
     flex: 1;
 }
 

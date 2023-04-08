@@ -53,6 +53,7 @@ btnLoop.addEventListener('click', () => {
 //disable loop
 var btnLoop = document.querySelector('.btn-disable-loop');
 btnLoop.addEventListener('click', () => {
-    vid.loop = false; // khi nhận sự kiện click thì gán về giá trị false, tức là vid đã nhận giá trị sai của loop nên k được phép lặp
+    // khi nhận sự kiện click thì gán về giá trị false, tức là vid đã nhận giá trị sai của loop nên k được phép lặp
+    vid.loop = false; 
     vid.load(); //gọi lại hàm load chỉ để load lại vid giúp user dễ nhận biết đã tắt loop
 });

@@ -788,29 +788,31 @@ body {
 .contact-title {
     display: block;
     margin-bottom: 0.8rem;
+    margin-top: 2rem;
     font-weight: 500;
     font-size: 1.6rem;
     cursor: pointer;
+
 }
 
 .contact-input {
     border: 1px solid #333;
     padding: 2rem 2.5rem;
-    margin-bottom: 2rem;
-    outline: none;
+    /* outline: none; */
     border-radius: 10px;
     width: 100%;
     color: #4F4F4F;
+    line-height: 1.8rem;
 }
 
 .contact-textarea-message {
     border: 1px solid #333;
-    outline: none;
+    /* outline: none; */
     border-radius: 10px;
     width: 100%;
     color: #4F4F4F;
     padding: 2rem 2.5rem;
-    
+
 }
 
 .input-wrap {
@@ -866,6 +868,22 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+.form-message {
+    display: block;
+    padding-top: 5px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+}
+
+.invalid :not(label, input, textarea){
+    color: rgb(241, 0, 0);
+}
+
+.invalid > input, .invalid > textarea {
+    border: 1px solid rgb(241, 0, 0);
+}
+
 
 
 

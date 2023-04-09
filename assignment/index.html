@@ -503,7 +503,7 @@
                         <form action="" class="contact-form" method="post" id="form-1">
                             <div class="form-group">
                                 <label for="fullname" class="contact-title">Name</label>
-                                <input id="fullname" name="fullname" type="text" placeholder="Enter your full name" class="contact-input" required>
+                                <input id="fullname" name="fullname" type="text" placeholder="Enter your full name" class="contact-input">
                                 <span class="form-message"></span>
                             </div>
 
@@ -511,13 +511,12 @@
                                 <div class="input-wrap">
                                     <div class="form-group">
                                         <label for="email" class="contact-title">Email</label>
-                                        <input id="email" name="email" type="email" placeholder="Enter your email" class="contact-input" required>
+                                        <input id="email" name="email" type="email" placeholder="Enter your email" class="contact-input">
                                         <span class="form-message"></span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="telphone" class="contact-title">Phone Number</label>
-                                        <input id="telphone" name="telphone" type="tel" placeholder="Enter your mobile number" class="contact-input"
-                                            required>
+                                        <label for="phonenumber" class="contact-title">Phone Number</label>
+                                        <input id="phonenumber" name="phonenumber" type="tel" placeholder="Enter your mobile number" class="contact-input">
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
@@ -526,10 +525,10 @@
                             <div class="form-group">
                                 <label for="message" class="contact-title">Message</label>
                                 <textarea name="message" id="message" cols="30" rows="5" placeholder="Write a Message"
-                                class="contact-textarea-message" required></textarea>
+                                class="contact-textarea-message"></textarea>
                                 <span class="form-message"></span>
-                                <button type="submit" class="btn-submit">Contact Us</button>
                             </div>
+                            <button type="submit" class="btn-submit">Contact Us</button>
                         </form>
                     </div>
                 </div>
@@ -578,14 +577,15 @@
 
     <script src="./js/app.js"></script>
     <script>
-
-        //mong muốn của chúng ta
         Validator({
             form: '#form-1',
+            errorSelector: '.form-message',
             rules: [
                 Validator.isRequired('#fullname'),
-                Validator.isEmail('email'),
-            ]
+                Validator.isEmail('#email'),
+                Validator.isPhoneNumber('#phonenumber'),
+                Validator.minLength('#message', 15),
+            ],
         });
     </script>
 </body>

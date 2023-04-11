@@ -63,7 +63,7 @@ function Validator(options) {
 
 //1        // lặp qua rule và xử lý (lắng nghe sự kiện blur, input);
         options.rules.forEach(function (rule){ 
-            var inputElement = formElement.querySelector(rule.selector);
+            var inputElement = formElement.querySelector(rule.selector); 
             if (inputElement) {
                     //xử lí trường hợp blur khỏi input
                     inputElement.onblur = function () { 
@@ -103,12 +103,12 @@ Validator.isEmail = function (selector) {
     };
 }
 
-Validator.isPhoneNumber = function (selector) {
+Validator.isPhoneNumber = function (selector, min) {
     return {
         selector: selector, 
         test: function (value) {
             var regexPhoneNumber = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
-                return regexPhoneNumber.test(value) ? undefined : 'Hmm! Can\'t format phone number ? ';
+                return regexPhoneNumber.test(value.length >= min) ? undefined : `Phone numbers must be in ${min} digit format ! `;
         }
     };
 }

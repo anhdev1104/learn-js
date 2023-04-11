@@ -10,7 +10,7 @@ btnPlay.addEventListener('click', () => {
     if (vid.paused) { //nếu video đang tạm dừng, tức là nó trả về true.
         vid.play(); //thì sẽ gọi tới hàm play() để bắt đầu video.
     } else { //ngược lại nếu nó trả về false, tức là video đang phát.
-        vid.pause(); // thì sẽ gọi hàm pause() để tạm dừng.
+        vid.pause(); // thì sẽ gọi hàm pause() để tạm dừng. 
     }
 });
 

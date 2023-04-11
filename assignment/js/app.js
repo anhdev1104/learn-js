@@ -26,9 +26,10 @@ document.getElementById('benefit-img-car').style.transform = 'scale(1)';
 // contact form
 // Đối tượng `Validator`
 function Validator(options) {
+    //hàm validate() thực hiện để hiện ra lỗi và bỏ lỗi
     function validate(inputElement, rule) {
         var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
-        var errorMessage = rule.test(inputElement.value);
+        var errorMessage = rule.test(inputElement.value); 
         if (errorMessage) {
             errorElement.innerText = errorMessage; 
             errorElement.parentElement.classList.add('invalid');
@@ -40,12 +41,13 @@ function Validator(options) {
         return !errorMessage;
     }
 
-    var formElement = document.querySelector(options.form);
+    //lấy element của form cần validate
+    var formElement = document.querySelector(options.form); 
     if (formElement) {
-        // khi submit form
+        // lắng nghe sự kiện khi submit form
         formElement.onsubmit = function(e) {
             e.preventDefault();
-            var isFormValid = true;
+            var isFormValid = true; //trong trường hợp ko có lỗi
             //lặp qua từng rules và validate
             options.rules.forEach(function (rule) {
                 var inputElement = formElement.querySelector(rule.selector);
@@ -59,15 +61,14 @@ function Validator(options) {
             }
         }
 
-        // lặp qua mỗi rule và xử lý (lắng nghe sự kiện blur, input);
+//1        // lặp qua rule và xử lý (lắng nghe sự kiện blur, input);
         options.rules.forEach(function (rule){ 
             var inputElement = formElement.querySelector(rule.selector);
             if (inputElement) {
                     //xử lí trường hợp blur khỏi input
-                    inputElement.onblur = function () {
-                    validate(inputElement, rule);
-                } 
-
+                    inputElement.onblur = function () { 
+                        validate(inputElement, rule);
+                }
                 //xử lí trường hợp nhập vào input
                 inputElement.oninput = function () {
                     var errorElement = inputElement.parentElement.querySelector(options.errorSelector);
@@ -75,7 +76,7 @@ function Validator(options) {
                     errorElement.parentElement.classList.remove('invalid');
                 }
             }
-        }); 
+        });
     }
 }
 

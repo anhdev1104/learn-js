@@ -577,13 +577,15 @@
 
     <script src="./js/app.js"></script>
     <script>
+        // cấu hình bên ngoài
+        // mong muốn output của chúng ta
         Validator({
             form: '#form-1',
             errorSelector: '.form-message',
             rules: [
                 Validator.isRequired('#fullname'),
                 Validator.isEmail('#email'),
-                Validator.isPhoneNumber('#phonenumber'),
+                Validator.isPhoneNumber('#phonenumber', 10),
                 Validator.minLength('#message', 15),
             ],
         });

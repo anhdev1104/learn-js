@@ -28,17 +28,18 @@ btnStop.addEventListener('click', () => { //lắng nghe sự kiện click và th
 //Volume (-)
 var btnReduce = document.querySelector('.btn-reduce');
 btnReduce.addEventListener('click', () => {
-//trỏ đến thuộc tính volume của vid, giá trị mặc định của thuộc tính = 1, giá trị âm thanh từ 0 --> 1 là tối đa giá trị âm lượng
-    if (vid.volume >= 1) { // tức là ban đầu âm thanh bằng 1 vì thế xét đk nhỏ hơn hoặc bằng thì thực thi đk
-        vid.volume = 0.2; // xét giảm giá trị volume thành 0.2 âm lượng
+//trỏ đến thuộc tính volume của vid, giá trị mặc định của thuộc tính = 0, giá trị âm thanh từ 0 --> 1 là tối đa giá trị âm lượng
+// tức là ban đầu âm thanh bằng 0 vì thế xét đk nhỏ hơn hoặc bằng thì thực thi đk
+    if (vid.volume >= 0) {
+        vid.volume = parseFloat(vid.volume - 0.1).toFixed(1);
     }
 });
 
 //Volume (+)
 var btnIncrease = document.querySelector('.btn-increase');
 btnIncrease.addEventListener('click', () => {
-    if (vid.volume < 1) { // nếu giá trị volume nhỏ hơn 1 sẽ thực thi câu lệnh bên trong
-        vid.volume = 1.0; // xét tăng giá trị volume thành 1.0 âm lượng
+    if (vid.volume < 1) {
+        vid.volume = parseFloat(vid.volume + 0.1).toFixed(1);
     }
 });
 

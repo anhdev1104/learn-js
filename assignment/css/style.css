@@ -22,13 +22,22 @@ html {
     font-size: 62.5%;
     line-height: 1.6rem;
     scroll-behavior: smooth;
-
 }
 
 body {
     font-family: var(--primary-font);
     background-color: var(--white-color);
     font-size: 1.4rem;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 10px;
+    height: 15rem;
 }
 
 .ptb-200 {
